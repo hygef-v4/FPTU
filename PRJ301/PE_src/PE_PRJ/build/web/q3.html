@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <td>
+        <input type="submit" value="Search">
+        <input type="hidden" name="action" value="search" >
+    </td>
+    
+    // table filer, search
+    <form method="get" action="execute">
+            <table>
+
+                <tr>
+                    <td>Choose an option:</td>
+                    <td>
+
+
+                        <select name="option">
+                            <c:forEach var="obj" items="${typeNameList}">
+                                <option value="${obj}">${obj}</option>
+                            </c:forEach>
+                            <option value="all">All types</option>
+
+                        </select>
+
+
+                    </td>
+                    <td>
+                        <input type="submit" name="action" value="Filter">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enter a result:</td>
+                    <td><input name="result" type="text"</td>
+                    <td>
+                        <input type="submit" name="action" value="Search">
+                        <input type="hidden"  >
+                    </td>
+
+                </tr>
+
+
+            </table>
+        </form>
+    
+    // table list 
+    <form>
+            <p>Result of Filter/Search</p>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>String str</th>
+                        <th>Option</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <c:forEach var="obj" items="${list}">
+
+                        <tr>
+                            <td>${obj.getExecutionID()}</td>
+                            <td>${obj.getInputString()}</td>
+                            <td>${typesDAO.findById(obj.getTypeID()).getTypeName()}</td>
+                            <td>${obj.getResult()}</td>
+                        </tr>
+                    </c:forEach>
+                </tbody>
+            </table>
+
+        </form>
+</body>
+</html>

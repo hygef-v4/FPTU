@@ -1,0 +1,82 @@
+package src;
+
+import java.util.LinkedHashMap;
+import java.util.List;
+import model.Subjects;
+
+/**
+ *
+ * @author hungs
+ */
+public class exampleGenericDAO extends GenericDAO_HOLA<Subjects> {
+
+    @Override
+    public List<Subjects> findAll() {
+        List<Subjects> list = queryGenericDAO();
+        return list;
+    }
+
+ 
+    public void insert(Subjects t) {
+        String sql = "INSERT INTO [dbo].[Subjects] ([SubjectID], [SubjectName]) VALUES (?, ?)";
+
+        parameterMap = new LinkedHashMap<>();
+        parameterMap.put("1", t.getSubjectID());
+        parameterMap.put("2", t.getSubjectName());
+
+        insertGenericDAO(sql); // Ensure this method returns an int
+    }
+
+    public Subjects findById(int id) {
+        String sql = "select  * from Subjects where SubjectID = ?";    // tim xem co id ko 
+        parameterMap = new LinkedHashMap<>();
+        parameterMap.put("SubjectID", id);
+        return queryGenericDAO(sql).isEmpty() ? null : queryGenericDAO(sql).get(0);  
+// tra ve object dau tien trong list 
+    }
+
+  
+
+    public void delete(int id) {
+        String sql = "DELETE FROM [dbo].[Subjects]\n"
+                + "      WHERE SubjectID = ? ";
+        parameterMap = new LinkedHashMap<>();
+        parameterMap.put("SubjectID", id);
+        deleteGenericDAO(sql);
+    }
+
+    public void update(String name, int id) {
+        String sql = "UPDATE [dbo].[Subjects]\n"
+                + "   SET [SubjectName] = ?\n"
+                + " WHERE SubjectID = ? ";
+        parameterMap = new LinkedHashMap<>();
+        parameterMap.put("SubjectName", name);
+        parameterMap.put("SubjectID", id);
+
+        updateGenericDAO(sql);
+    }
+
+    public List<String> getAllSubjectNames() {
+        return queryColumnValues("SubjectName");
+    }
+
+    public static void main(String[] args) {
+        exampleGenericDAO subjectDAO = new exampleGenericDAO();
+        Subjects sj = new Subjects(10, "hung");
+        subjectDAO.insert(sj);
+        
+    }
+
+// delete id theo 2 bang 
+public void delete(int id) {
+        String sql = "DELETE FROM ExecutionItems WHERE ExecutionID = ?;\n"
+                + "DELETE FROM Executions WHERE ExecutionID = ?;";
+        List<Object> parameters = new ArrayList<>();
+        parameters.add(id);  // First ? in SQL
+        parameters.add(id);  // Second ? in SQL
+
+        deleteGenericDAO(sql, parameters);
+
+    }
+
+}

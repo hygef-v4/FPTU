@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="ServletRoleURL" method="POST">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Role Name</td>
+                        <td><input type="text" name="roleName"><br/></td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>
+                            <input type="radio" name="status" value="1" checked>Active
+                            <input type="radio" name="status" value="0">DeActive
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" name="submit" value="Add Role"></td>
+                        <td><input type="reset" value="Reset">
+                            <input type="hidden" name="service" value="addRole"> </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </form>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+.label, input, select, option {
+    font-size: 30px;
+    color: blue;
+
+}
+.bg{
+    background-color: bisque;
+    width: 50%;
+    height:auto;
+}
+h1{
+    text-align: center;
+}
+button{
+    margin: auto;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.submit{
+    text-align: center
+}

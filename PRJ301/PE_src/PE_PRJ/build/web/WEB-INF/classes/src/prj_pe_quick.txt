@@ -1,0 +1,280 @@
+       //session 
+ HttpSession session = request.getSession(); 
+
+//jstl lib 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
+// for each jsp 
+ 		<c:forEach items="${list}" var="obj">
+                    <tr>
+                        <th>${obj.arr}</th>
+                        <th>${obj.option}</th>
+                        <th>${obj.result}</th>
+                    </tr>
+                </c:forEach>
+
+
+// check input int (servlet) 
+try {
+            String a_raw = request.getParameter("a");
+            String b_raw = request.getParameter("b");
+
+           
+            // parse
+            int a = Integer.parseInt(a_raw);
+            int b = Integer.parseInt(b_raw);
+            
+           
+            
+
+        } catch (Exception e) {
+            PrintWriter out = response.getWriter();
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet ExecuteServlet</title>");
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1> " + "You must input an integer > 0" + " </h1>");  // in ra bcnn 
+            out.println("</body>");
+            out.println("</html>");
+        }
+
+
+q2
+
+// integer parse 
+ int id = 0;
+String id_raw = "";
+
+switch (action) {
+            case "list":
+                id_raw = request.getParameter("id");
+                id = Integer.parseInt(id_raw);
+                Executions exFind = executionDao.findById(id);
+                session.setAttribute("exFind", exFind);
+                break;
+}
+
+//get list session
+
+  List<LCM> list = (List<LCM>) session.getAttribute("list"); 
+            
+            // check list null, neu null tao ra list moi 
+            if (list == null){
+                list = new ArrayList<>(); 
+            }
+
+// kiem tra xem trong list co object a b c = a b c cua request ko 
+            
+            for (LCM lcm : list){
+                if (lcm.getA() == a && lcm.getB() == b && lcm.getC() == c){
+                    //set loi 
+                    session.setAttribute("errorMsg", "Execution existed!");
+                    request.getRequestDispatcher("MyExam.jsp").forward(request, response); 
+                    return; 
+                }
+            }
+ 		LCM lcm = new LCM(a,b,c,result); 
+           	 list.add(lcm); 
+          	  session.setAttribute("list", list);
+
+
+q3
+
+jsp : 
+// list all array list element in a column 
+<td>
+                               
+ <c:forEach var="executionItem" items="${executionItemDao.findByExecutionID(obj.getExecutionID())}">
+                                    ${executionItem.getArrayItem()} 
+                                </c:forEach>
+
+                            </td>
+// value cho array 
+
+<tr>
+                <td>Array:</td>
+                <td>
+                    <input 
+                        value="<c:forEach var="executionItem" items="${executionItemDao.findByExecutionID(exFind.getExecutionID())}">${executionItem.getArrayItem()} </c:forEach>" readonly type="text" name="b">
+                    </td>
+                </tr>
+
+db context : 
+// test connect
+ public boolean isConnected() {
+        try {
+            return connection != null && !connection.isClosed();
+        } catch (SQLException ex) {
+            Logger.getLogger(DBContext.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+    }
+    
+     // Phương thức main để kiểm tra kết nối
+    public static void main(String[] args) {
+        DBContext dbContext = new DBContext();
+        if (dbContext.isConnected()) {
+            System.out.println("Kết nối cơ sở dữ liệu thành công!");
+        } else {
+            System.out.println("Kết nối cơ sở dữ liệu thất bại.");
+        }
+
+    }
+
+DAO:
+// list all object 
+
+public List<Types> findAll() {
+        return queryGenericDAO(); 
+    }
+
+	// find object by id 
+ public Subjects findById(int id) {
+        String sql = "select  * from Subjects where SubjectID = ?";    // tim xem co id ko 
+        parameterMap = new LinkedHashMap<>();
+        parameterMap.put("SubjectID", id);
+        return queryGenericDAO(sql).isEmpty() ? null : queryGenericDAO(sql).get(0);  // tra ve object dau tien trong list 
+    }
+
+// list all column name 
+ public List<String> getAllSubjectNames() {
+        return queryColumnValues("SubjectName");
+    }
+    
+// test
+public static void main(String[] args) {
+        SubjectDAO subjectDAO = new SubjectDAO();
+        for(String s : subjectDAO.getAllSubjectNames()){
+            System.out.println(s);
+        }
+    }
+
+// lay tat ca ten trong 1 cot 
+ public List<String> getAllSubjectNames() {
+        return queryColumnValues("SubjectName");
+    }
+// delete id theo 2 bang 
+public void delete(int id) {
+        String sql = "DELETE FROM ExecutionItems WHERE ExecutionID = ?;\n"
+                + "DELETE FROM Executions WHERE ExecutionID = ?;";
+        List<Object> parameters = new ArrayList<>();
+        parameters.add(id);  // First ? in SQL
+        parameters.add(id);  // Second ? in SQL
+
+        deleteGenericDAO(sql, parameters);
+
+    }
+
+// add nhieu gia tri cua hang cung id vao list vi du gia tri arrayitem
+public List<Integer> findByExecutionId(int executionId) {
+        List<Integer> arrayItems = new ArrayList<>();
+        String sql = "SELECT ArrayItem FROM ExecutionItems WHERE ExecutionID = ?";
+
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setInt(1, executionId);
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                arrayItems.add(rs.getInt("ArrayItem"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return arrayItems;
+    }
+
+Servlet copy
+
+
+protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        List<Players> playerList = playerDAO.findAll();
+        List<String> codeList = playerDAO.findIDList();
+        session.setAttribute("playerList", playerList);
+        session.setAttribute("codeList", codeList);
+        String action = request.getParameter("action");
+        if (action == null) {
+            action = ""; // Default empty action to prevent errors
+        }
+        String URL;
+        switch (action) {
+            case "list":
+                String code = request.getParameter("code");
+                Players player = playerDAO.findById(code);
+                Teams team = teamDAO.findById(player.getTeamID());
+                String teamName = team.getTeamName();
+                session.setAttribute("player", player);
+                session.setAttribute("teamName", teamName);
+
+                break;
+
+        }
+
+        request.getRequestDispatcher("index.jsp").forward(request, response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String action = request.getParameter("action");
+        if (action == null) {
+            action = ""; // Default empty action to prevent errors
+        }
+        switch (action) {
+
+            case "delete":
+                String code = request.getParameter("code");
+                playerDAO.deletePlayer(code);
+                response.sendRedirect("show");
+                return; // Ensure no further execution
+        }
+    }
+
+
+
+// do get
+
+protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        List<Executions> executionList = executionsDAO.findAll();
+
+        List<String> typeNameList = typesDAO.getAllTypestNames();
+        String action = request.getParameter("action");
+        if (action == null) {
+            action = ""; // Default empty action to prevent errors
+        }
+        String option;
+        switch (action) {
+            case "Filter":
+                option = request.getParameter("option");
+                if (!option.equals("all")) {
+                    executionList = executionsDAO.findByTypeName(option);
+                }
+                break;
+            case "Search":
+                String result_raw = request.getParameter("result");
+                if (result_raw.trim().isEmpty() || result_raw == null) {
+                    executionList = executionsDAO.findAll();
+                    break;
+                }
+                int result = Integer.parseInt(result_raw);
+
+                executionList = executionsDAO.findByResult(result);
+                break;
+
+        }
+
+        session.setAttribute("list", executionList);
+
+        session.setAttribute("typesDAO", typesDAO);
+        session.setAttribute("typeNameList", typeNameList);
+
+        request.getRequestDispatcher("index.jsp").forward(request, response);
+    }
+
+
