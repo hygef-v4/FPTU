@@ -1,0 +1,27 @@
+MOS = Modern Operating System Tanenbaum  4-th edition
+
+MOS Chapter 1 (quizlet): 
+https://quizlet.com/subject/Modern-Operating-Systems-Tanenbaum/
+
+MOS Test 1:
+https://quizlet.com/94507722/modern-operating-systems-test-1-flash-cards/
+
+MOS Chapter 2 (Processes and Threads) quizlet 
+https://quizlet.com/550077398/tanenbaum-chapter-2-processes-and-threads-flash-cards/
+
+MOS Chapter 2 (Processes and Threads)
+https://quizlet.com/269494976/chapter-2-processes-and-threads-tanenbaum-4th-edition-flash-cards/
+
+MOS Chapter 3 (Memory Management)
+https://quizlet.com/550074704/tanenbaum-chapter-3-memory-management-flash-cards/
+
+
+MOS Chapter 4 (File Management) quizlet
+https://quizlet.com/87220725/chapter-4-operating-systems-and-file-management-flash-cards/
+
+
+MOS Chapter 5, MOS Chapter 6  quizlets?
+
+Deadlocks quizlet
+https://quizlet.com/30506026/os-deadlock-flash-cards/
+https://quizlet.com/5950956/chapter-7-deadlocks-flash-cards/

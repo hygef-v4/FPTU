@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <unistd.h>
+ 
+int x = 0;
+ 
+void *myThreadFun(void *vargp)
+{
+    int myid = (int)vargp;
+ 
+    int v = 0;
+ 
+    ++v; ++x;
+ 
+    printf("Thread ID: %d, Value1: %d, Value2: %d\n", myid, v, x);
+}
+ 
+int main()
+{
+    int i;
+    pthread_t tid[3]; 
+
+    for (i = 0; i < 3; i++)
+        pthread_create(&tid[i], NULL, myThreadFun, (void *)i);
+  
+  
+    for (i = 0; i < 3; i++)
+	pthread_join(tid[i], NULL);
+
+    return 0; 
+}
+
+/*Answer the below question:
+•	How many created threads?   _____________
+•	What is the name of the function that was executed by all threads? ___________
+•	What is the parameter that was passed to the thread function? _____________
+•	Variable (x) is:	
+a.	Global / Local variable.
+b.	Shared / Not shared among all threads.
+•	Variable (v) is:
+a.	Global / Local variable.
+b.	Shared / Not shared among all threads.
+•	Complete the table according to the program’s output:
+•	Regarding the second for loop in the main process:
+for (i = 0; i < 3; i++)
+pthread_join(tid[i], NULL);
+a.	What is the effect of this for loop?
+What is the effect of writing pthread_join(tid, NULL)only, instead of the previous for loop?
+
+*/

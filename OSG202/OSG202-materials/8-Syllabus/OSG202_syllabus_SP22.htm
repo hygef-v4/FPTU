@@ -1,0 +1,3396 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link href="/Content/css?v=5SsskdAh3ChL4quPJSdTqyWDt4Uye5HAhSRdbwb5Vwg1" rel="stylesheet"/>
+<link href="../../../fonts/css/font-awesome.min.css" rel="stylesheet" /><link href="../../../Content/font-face.css" rel="stylesheet" /><link href="../../../Content/bootstrap.min.css" rel="stylesheet" /><link href="../../../Content/common.css" rel="stylesheet" /><link href="../../../bundles/customcss" rel="stylesheet" /><link href="../../../fonts/css/font-awesome.min.css" rel="stylesheet" /><link href="../../../fonts/css/Bootstrap-select-v1.13.14.css" rel="stylesheet" /><link href="../../../Content/toastr.min.css" rel="stylesheet" />
+    <style>
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        * {
+            font-family: 'Roboto';
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5em;
+        }
+
+        body {
+            background: #fafafa;
+            padding: 0;
+        }
+
+        nav-bar {
+            position: fixed;
+            width: 100%
+        }
+
+        #sidebar a,
+        #sidebar a:hover,
+        #sidebar a:focus {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        /* Side Bar*/
+
+
+
+        #sidebar.sb-active {
+            margin-left: -300px;
+        }
+
+        .wrapper {
+            display: flex;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+
+        input, select {
+            font-size: inherit !important;
+            /*height: 33.5px !important;*/
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 0 0.8em;
+        }
+
+        .tbl-data {
+            border: 1px solid rgba(0,0,0,.05);
+        }
+
+            .tbl-data th {
+                font-weight: bold;
+                background-color: #F2994A !important;
+                color: white;
+            }
+
+            .tbl-data input[type=checkbox] {
+                width: 20px;
+            }
+
+        .tbl-detail tr td {
+            padding: 4px 5px 4px 5px;
+            border: 1px solid rgba(0,0,0,.05);
+        }
+
+        .tbl-checkbox label {
+            position: relative;
+            top: -11px;
+            left: 2px;
+        }
+
+        .max-with-fit {
+            max-width: fit-content;
+        }
+
+        textarea {
+            font-size: inherit !important;
+        }
+
+        #sidebar {
+            min-width: 300px;
+            max-width: 300px;
+            margin-top: 10px;
+            margin-left: 10px;
+            color: #fff;
+            transition: all 0.3s;
+            overflow-y: scroll;
+            height: 800px;
+            border-radius: 5px;
+            background-color: #F2994A;
+        }
+
+            #sidebar::-webkit-scrollbar {
+                width: 0;
+            }
+
+            #sidebar p {
+                padding: 15px;
+                background: #F2994A;
+                font-weight: bold;
+                font-size: 20px;
+            }
+
+            #sidebar ul.components {
+                padding: 20px 0;
+            }
+
+
+            #sidebar ul li a {
+                padding: 10px;
+                font-size: 1em;
+                display: block;
+                background-color: #f4a158;
+            }
+
+                #sidebar ul li a:hover {
+                    background: #d06e17;
+                }
+
+            #sidebar ul li.sb-active > a,
+            a[aria-expanded="true"] {
+                color: #fff;
+            }
+
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+
+        #navbarSupportedContent .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -15%;
+            transform: translateY(-50%);
+        }
+
+        .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 7%;
+            transform: translateY(-50%);
+        }
+
+        #sidebar ul ul a {
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+            background: #d29a68;
+        }
+
+        #content {
+            height: calc(100vh - 97px);
+            width: 100%;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+
+        #ui-datepicker-div {
+            width: fit-content;
+        }
+
+        .menu-btn {
+            border: none;
+            background-color: #F2994A;
+        }
+
+            .menu-btn:focus {
+                outline: none;
+                box-shadow: none;
+            }
+
+        .btn-green:hover {
+            background-color: #009900;
+        }
+
+        .btn-success {
+            width: 70px;
+            height: 40px;
+            font-weight: bold;
+        }
+
+        #btn-home {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+        }
+
+            #btn-home:hover {
+                color: white;
+            }
+
+            #btn-home span {
+                position: relative;
+                top: 2px;
+                font-size: 15px;
+            }
+
+            #btn-home i {
+                position: relative;
+                top: 2px;
+            }
+
+        .btn-light {
+            border: 1px solid #d9cfcf;
+        }
+
+        #showModelNeed {
+            height: 33.5px;
+        }
+    </style>
+<title>
+	FPT University Learning Materials
+</title></head>
+
+<body>
+    <form method="post" action="./SyllabusDetails?sylID=5166" id="form2">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form2'];
+if (!theForm) {
+    theForm = document.form2;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMrpL97guh2x_lfUiu-1_hlzlbl--S7Vc8swdj3bZMABH4j1Fn0pmI18V554x5p3Bw2&amp;t=636776977224055265" type="text/javascript"></script>
+
+
+<script src="../../../Scripts/WebForms/MsAjax/MicrosoftAjax.js" type="text/javascript"></script>
+<script src="../../../Scripts/WebForms/MsAjax/MicrosoftAjaxWebForms.js" type="text/javascript"></script>
+<script src="../../../Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="../../../Scripts/popper.js" type="text/javascript"></script>
+<script src="../../../Scripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../../Scripts/jquery.validate.min.js" type="text/javascript"></script>
+<script src="../../../Scripts/Bootstrap-select-v1.13.14.js" type="text/javascript"></script>
+<script src="../../../Scripts/jquery-ui.min.js" type="text/javascript"></script>
+<script src="../../../Scripts/custom.js" type="text/javascript"></script>
+<script src="../../../Scripts/toastr.min.js" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="099A42EB" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="c7LCq+CIzV46qytVNPQB+AS9aezz7HB9Tv1Uiz1s0jSUiqBq/L2Agca1BnhF6MfnuQRtlGInCplWohxq7dUWJW08xh7NAULlincYaTTEucOnD38ufa+OYqIODXR5IQrc" />
+</div>
+        <nav class="navbar navbar-expand-lg px-0 pb-2 m-0" style="background-color: #F2994A; color: white;">
+            <div class="container-fluid p-0">
+                
+                
+                <a id="btn-home" class="btn btn-lg ml-3" href="/gui/Home.aspx">
+                    <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+                    <span style="font-weight: bold;">Home</span>
+                </a>
+                
+                <h1 class="text-center" style="position: absolute; left: 35%">FPT University Learning Materials</h1>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse nav-right-style" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item sb-active">
+                            <span class="sr-only">(current)</span>
+                        </li>
+                    </ul>
+                    <select id="language" style="z-index: 1; width: 130px" class="form-control">
+                        <option value="en">English</option>
+                        <option value="vi">Vietnamese</option>
+                    </select>
+                    <div class="mt-2">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img id="ProfileImage" class="rounded-circle" src="https://lh3.googleusercontent.com/a-/AOh14GiUJD6psQ1cvTYdjzvoxjmN-6y_W6W3UpQZCysmhA=s96-c" style="height:50px;width:50px;" />
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <div id="pnlProfile">
+	
+                                            <span class="dropdown-item">Name:
+                                                <span id="lblName" style="font-weight:bold;">(FUG - Giảng viên CF) Phan Đăng Cầu</span>
+                                            </span>
+                                            <span class="dropdown-item">
+                                                <div id="pnlEmail">
+		
+                                                    Email:
+                                                        <span id="lblEmail" style="font-weight:bold;">caupd@fpt.edu.vn</span>
+                                                
+	</div>
+                                            </span>
+                                            <span class="dropdown-item">User's role:
+                                                   <span id="lblRole" style="font-weight:bold;">Teacher</span>
+                                            </span>
+                                            <span class="dropdown-item">Education level:
+                                                <span id="lblEduLevel" style="font-weight:bold;">FU</span>
+                                            </span>
+                                            <div class="dropdown-item ">
+                                                <a id="lbtnSignOut" href="javascript:__doPostBack(&#39;ctl00$lbtnSignOut&#39;,&#39;&#39;)" style="display:inline-block;width:100%;">Sign out FLM</a>
+                                            </div>
+                                        
+</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="wrapper">
+            
+            <div id="content" class="p-4">
+
+                <div class="mx-3 ">
+                    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form2', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+                    
+    <link href="../../../fonts/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../../Content/font-face.css" rel="stylesheet" />
+    <link href="../../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../../Content/common.css" rel="stylesheet" />
+    <style type="text/css">
+        .auto-style2 {
+            width: 155px;
+        }
+
+        .auto-style3 {
+            width: 155px;
+            height: 24px;
+        }
+
+        /*Table*/
+        #gvSubs, #table-detail, #gvMaterial, #gvLO, #gvSchedule, #gvAssessment {
+            border: 1px solid rgba(0,0,0,.05);
+        }
+
+            #gvSubs th {
+                font-weight: bold;
+                background-color: #F2994A;
+                color: white;
+            }
+
+            #gvMaterial th {
+                font-weight: bold;
+                background-color: #F2994A;
+                color: white;
+            }
+
+            #gvLO th {
+                font-weight: bold;
+                background-color: #F2994A;
+                color: white;
+            }
+
+            #gvSchedule th {
+                font-weight: bold;
+                background-color: #F2994A;
+                color: white;
+            }
+        /*Table*/
+        #gvCQ {
+            border: 1px solid rgba(0,0,0,.05);
+        }
+
+            #gvCQ th {
+                font-weight: bold;
+                background-color: #F2994A;
+                color: white;
+            }
+
+        .table-top {
+            border-collapse: separate;
+            border-spacing: 0 0.5em;
+        }
+
+        #gvAssessment th {
+            font-weight: bold;
+            background-color: #F2994A;
+            color: white;
+        }
+
+        .table-detail tr td {
+            padding: 6px 10px 6px 10px;
+        }
+        /*Table*/
+        #gvPLO {
+            border: 1px solid rgba(0,0,0,.05);
+        }
+
+            #gvPLO th {
+                font-weight: bold;
+                background-color: #F2994A;
+                color: white;
+            }
+
+        .table-top {
+            border-collapse: separate;
+            border-spacing: 0 0.5em;
+        }
+
+        .plo, table {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            .plo td, #customers th {
+                border: 1px solid rgba(0,0,0,.05);
+                padding: 8px;
+            }
+
+            .plo tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            .plo tr:hover {
+                background-color: #ddd;
+            }
+
+            .plo th, .header_PLO {
+                border: 1px solid rgba(0,0,0,.05);
+                padding-top: 12px;
+                padding-bottom: 12px;
+                padding-left: 6px;
+                padding-right: 6px;
+                text-align: center;
+                background-color: #F2994A;
+                color: white;
+                font-weight: bold;
+            }
+
+                .plo td, .header_PLO td {
+                    text-align: center;
+                }
+
+        .textRedBold {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+    <div>
+        <h1 class="mb-4">Syllabus Details</h1>
+        
+        
+        <table id="table-detail" class="tbl-detail" cellspacing="0" rules="all" border="1" style="border-collapse: collapse; width: 100%;">
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">Syllabus ID:</td>
+                <td class="auto-style6">
+                    <span id="lblSyllabusID">5166</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right; table-layout: auto;">Syllabus Name:</td>
+                <td class="auto-style4">
+                    <span id="lblSyllabusName" style="font-weight:bold;">Operating System_Hệ điều hành</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">Subject Code:</td>
+                <td class="auto-style6">
+                    <span id="lblSubjectCode" style="font-weight:bold;">OSG202</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">NoCredit:</td>
+                <td class="auto-style6">
+                    <span id="lblNoCredit">3</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">Degree Level:</td>
+                <td class="auto-style6">
+                    <span id="lblDegreeLevel">Bachelor</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">Time Allocation:</td>
+                <td class="auto-style6">
+                    <span id="lblTimeAllocation">Class hours: 30 slots - 1slot =90'<br/>     Home study:    30 slots </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">Pre-Requisite:</td>
+                <td class="auto-style6">
+                    <span id="lblPreRequisite"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">Description:</td>
+                <td class="auto-style6">
+                    <span id="lblDescription">At the end of this course, students will be able to perceive:<br/>1) Background knowledge: (ABET e)<br/>-The role of operating system,<br/>- important OS concepts, <br/>- the mechanism of operating system, and <br/>- main problems of Operating system.<br/>2) Practice skills: (ABET k)<br/>- Using basic shell command in Linux system fluently.<br/>- Fundamental of shell, C language on Linux.<br/>- Main problems of Operating system through some simulative exercises.<br/>3) Information searching, reading and selection skills (ABET i)<br/>4) Working in group, documenting and presenation skills (ABET g)</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">StudentTasks:</td>
+                <td class="auto-style6">
+                    <span id="lblStudentTask">- Students must attend more than 80% of contact slots in order to be accepted to the final examination.<br/>- Student is responsible to do all exercises given by instructor in class or at home and submit on time<br/>- Use laptop in class only for learning purpose <br/>- Promptly  access to the FU LMS for up-to-date course information</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">Tools:</td>
+                <td class="auto-style6">
+                    <span id="lblTools">- Internet<br/>- Linux operating system server and/ or desktop</span>
+                </td>
+            </tr>
+            <tr id="trScoringScale">
+	<td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">Scoring Scale:</td>
+	<td class="auto-style6">
+                    <span id="lblScoringScale">10</span>
+                </td>
+</tr>
+
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">DecisionNo MM/dd/yyyy: </td>
+                <td class="auto-style6">
+                    <span id="lblDecisionNo">1485/QĐ-ĐH-FPT dated 12/31/2021</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">IsApproved:</td>
+                <td class="auto-style6">
+                    <span id="lblIsApproved" style="font-weight:bold;">True</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">Note:</td>
+                <td class="auto-style6">
+                    <span id="lblNote"></span>
+                </td>
+            </tr>
+            <tr id="trMinAvgMarkToPass">
+	<td class="auto-style3" align="right" style="text-align: right; table-layout: auto;">MinAvgMarkToPass:</td>
+	<td class="auto-style4">
+                    <span id="lblMinAvgMarkToPass">5</span>
+                </td>
+</tr>
+
+            <tr>
+                <td class="auto-style3" align="right" style="text-align: right; table-layout: auto;">IsActive:</td>
+                <td class="auto-style4">
+                    <span id="lblIsActive">True</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">ApprovedDate:</td>
+                <td class="auto-style6">
+                    <span id="lblApprovedDate"></span>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <span id="lblMessageMat" style="color:#23AC68;">5 material(s)</span>
+
+        <br />
+        <div>
+	<table class="table table-striped tbl-data" cellspacing="0" rules="all" border="1" id="gvMaterial" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">MaterialDescription</th><th scope="col">IsMainMaterial</th><th scope="col">ISBN</th><th scope="col">IsHardCopy</th><th scope="col">IsOnline</th><th scope="col">Note</th><th scope="col">Author</th><th scope="col">Publisher</th><th scope="col">PublishedDate</th><th scope="col">Edition</th>
+		</tr><tr>
+			<td>Modern Operating Systems (4th edition or 3rd  or 2nd)</td><td></td><td>9780133591620  (4th)                                                                                </td><td></td><td></td><td>&nbsp;</td><td>Andrew S. Tanenbaum</td><td>Pearson</td><td>2014 (4th)</td><td>4th or 3rd or 2nd</td>
+		</tr><tr>
+			<td>Course slides (.pptx)</td><td></td><td>                                                                                                    </td><td></td><td></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>Understanding operating systems</td><td></td><td>978-1305674257                                                                                      </td><td></td><td></td><td>&nbsp;</td><td>Ann McIver McHoes and Ida M. Flynn</td><td>Cengage Learning</td><td>2008</td><td>8th</td>
+		</tr><tr>
+			<td>http://courses.knox.edu/cs226/</td><td></td><td>                                                                                                    </td><td></td><td></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>Connecting with Computer Science</td><td></td><td>978-1439080351                                                                                      </td><td></td><td></td><td>&nbsp;</td><td>Creg Anderson,  David Ferrro, Robert Hilbon</td><td>Thomson course Technology</td><td>2010</td><td>2nd Edition</td>
+		</tr>
+	</table>
+</div>
+
+        <br />
+        <span id="lblMessageLO" style="color:#23AC68;">10 LO(s)</span>
+
+        <div>
+	<table class="table table-striped tbl-data" cellspacing="0" rules="all" border="1" id="gvLO" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">CLO Name</th><th scope="col">CLO Details</th>
+		</tr><tr>
+			<td>CLO1</td><td>Understand the main concepts of operating system</td>
+		</tr><tr>
+			<td>CLO10</td><td>Understand basic C/C++ language on Linux</td>
+		</tr><tr>
+			<td>CLO2</td><td>Understand the main concepts of process management</td>
+		</tr><tr>
+			<td>CLO3</td><td>Understand the main concepts of memory management</td>
+		</tr><tr>
+			<td>CLO4</td><td>Understand the main concepts of file systems</td>
+		</tr><tr>
+			<td>CLO5</td><td>Understand the main concepts of I/O systems</td>
+		</tr><tr>
+			<td>CLO6</td><td>Understand the main concepts of deadlock</td>
+		</tr><tr>
+			<td>CLO7</td><td>Using Linux operating system</td>
+		</tr><tr>
+			<td>CLO8</td><td>Using basic shell command in Linux system fluently</td>
+		</tr><tr>
+			<td>CLO9</td><td>Understand basic Shell language on Linux</td>
+		</tr>
+	</table>
+</div>
+        <br />
+        
+
+        <table class="plo tbl-data">
+            <thead>
+                <th colspan="21">Mapping of CLOs to PLOs of Curriculum BIT_SE</th>
+            </thead>
+            <tbody>
+                <tr class="header_PLO">
+                    <td style="background-color: #F2994A;" rowspan="2">CLO</td>
+                    <td style="background-color: #F2994A;" colspan="19">PLOs</td>
+                </tr>
+                <tr class="header_PLO">
+                    
+                    <td style="background-color: #F2994A;">PLO1</td>
+                    
+                    <td style="background-color: #F2994A;">PLO2</td>
+                    
+                    <td style="background-color: #F2994A;">PLO3</td>
+                    
+                    <td style="background-color: #F2994A;">PLO4</td>
+                    
+                    <td style="background-color: #F2994A;">PLO5</td>
+                    
+                    <td style="background-color: #F2994A;">PLO6</td>
+                    
+                    <td style="background-color: #F2994A;">PLO7</td>
+                    
+                    <td style="background-color: #F2994A;">PLO8</td>
+                    
+                    <td style="background-color: #F2994A;">PLO9</td>
+                    
+                    <td style="background-color: #F2994A;">PLO10</td>
+                    
+                    <td style="background-color: #F2994A;">PLO11</td>
+                    
+                    <td style="background-color: #F2994A;">PLO12</td>
+                    
+                    <td style="background-color: #F2994A;">PLO13</td>
+                    
+                    <td style="background-color: #F2994A;">PLO14</td>
+                    
+                    <td style="background-color: #F2994A;">PLO15</td>
+                    
+                    <td style="background-color: #F2994A;">PLO16</td>
+                    
+                    <td style="background-color: #F2994A;">PLO17</td>
+                    
+                    <td style="background-color: #F2994A;">PLO18</td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO1
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO2
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO3
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO4
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO5
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO6
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO7
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO8
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO9
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO10
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+            </tbody>
+        </table>
+        
+
+        <table class="plo tbl-data">
+            <thead>
+                <th colspan="21">Mapping of CLOs to PLOs of Curriculum BIT_IS</th>
+            </thead>
+            <tbody>
+                <tr class="header_PLO">
+                    <td style="background-color: #F2994A;" rowspan="2">CLO</td>
+                    <td style="background-color: #F2994A;" colspan="19">PLOs</td>
+                </tr>
+                <tr class="header_PLO">
+                    
+                    <td style="background-color: #F2994A;">PLO1</td>
+                    
+                    <td style="background-color: #F2994A;">PLO2</td>
+                    
+                    <td style="background-color: #F2994A;">PLO3</td>
+                    
+                    <td style="background-color: #F2994A;">PLO4</td>
+                    
+                    <td style="background-color: #F2994A;">PLO5</td>
+                    
+                    <td style="background-color: #F2994A;">PLO6</td>
+                    
+                    <td style="background-color: #F2994A;">PLO7</td>
+                    
+                    <td style="background-color: #F2994A;">PLO8</td>
+                    
+                    <td style="background-color: #F2994A;">PLO9</td>
+                    
+                    <td style="background-color: #F2994A;">PLO10</td>
+                    
+                    <td style="background-color: #F2994A;">PLO11</td>
+                    
+                    <td style="background-color: #F2994A;">PLO12</td>
+                    
+                    <td style="background-color: #F2994A;">PLO13</td>
+                    
+                    <td style="background-color: #F2994A;">PLO14</td>
+                    
+                    <td style="background-color: #F2994A;">PLO15</td>
+                    
+                    <td style="background-color: #F2994A;">PLO16</td>
+                    
+                    <td style="background-color: #F2994A;">PLO17</td>
+                    
+                    <td style="background-color: #F2994A;">PLO18</td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO1
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO2
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO3
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO4
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO5
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO6
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO7
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO8
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO9
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO10
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+            </tbody>
+        </table>
+        
+
+        <table class="plo tbl-data">
+            <thead>
+                <th colspan="21">Mapping of CLOs to PLOs of Curriculum BIT_IoT</th>
+            </thead>
+            <tbody>
+                <tr class="header_PLO">
+                    <td style="background-color: #F2994A;" rowspan="2">CLO</td>
+                    <td style="background-color: #F2994A;" colspan="19">PLOs</td>
+                </tr>
+                <tr class="header_PLO">
+                    
+                    <td style="background-color: #F2994A;">PLO1</td>
+                    
+                    <td style="background-color: #F2994A;">PLO2</td>
+                    
+                    <td style="background-color: #F2994A;">PLO3</td>
+                    
+                    <td style="background-color: #F2994A;">PLO4</td>
+                    
+                    <td style="background-color: #F2994A;">PLO5</td>
+                    
+                    <td style="background-color: #F2994A;">PLO6</td>
+                    
+                    <td style="background-color: #F2994A;">PLO7</td>
+                    
+                    <td style="background-color: #F2994A;">PLO8</td>
+                    
+                    <td style="background-color: #F2994A;">PLO9</td>
+                    
+                    <td style="background-color: #F2994A;">PLO10</td>
+                    
+                    <td style="background-color: #F2994A;">PLO11</td>
+                    
+                    <td style="background-color: #F2994A;">PLO12</td>
+                    
+                    <td style="background-color: #F2994A;">PLO13</td>
+                    
+                    <td style="background-color: #F2994A;">PLO14</td>
+                    
+                    <td style="background-color: #F2994A;">PLO15</td>
+                    
+                    <td style="background-color: #F2994A;">PLO16</td>
+                    
+                    <td style="background-color: #F2994A;">PLO17</td>
+                    
+                    <td style="background-color: #F2994A;">PLO18</td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO1
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO2
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO3
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO4
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO5
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO6
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO7
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO8
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO9
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO10
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+            </tbody>
+        </table>
+        
+
+        <table class="plo tbl-data">
+            <thead>
+                <th colspan="21">Mapping of CLOs to PLOs of Curriculum BIT_IA</th>
+            </thead>
+            <tbody>
+                <tr class="header_PLO">
+                    <td style="background-color: #F2994A;" rowspan="2">CLO</td>
+                    <td style="background-color: #F2994A;" colspan="19">PLOs</td>
+                </tr>
+                <tr class="header_PLO">
+                    
+                    <td style="background-color: #F2994A;">PLO1</td>
+                    
+                    <td style="background-color: #F2994A;">PLO2</td>
+                    
+                    <td style="background-color: #F2994A;">PLO3</td>
+                    
+                    <td style="background-color: #F2994A;">PLO4</td>
+                    
+                    <td style="background-color: #F2994A;">PLO5</td>
+                    
+                    <td style="background-color: #F2994A;">PLO6</td>
+                    
+                    <td style="background-color: #F2994A;">PLO7</td>
+                    
+                    <td style="background-color: #F2994A;">PLO8</td>
+                    
+                    <td style="background-color: #F2994A;">PLO9</td>
+                    
+                    <td style="background-color: #F2994A;">PLO10</td>
+                    
+                    <td style="background-color: #F2994A;">PLO11</td>
+                    
+                    <td style="background-color: #F2994A;">PLO12</td>
+                    
+                    <td style="background-color: #F2994A;">PLO13</td>
+                    
+                    <td style="background-color: #F2994A;">PLO14</td>
+                    
+                    <td style="background-color: #F2994A;">PLO15</td>
+                    
+                    <td style="background-color: #F2994A;">PLO16</td>
+                    
+                    <td style="background-color: #F2994A;">PLO17</td>
+                    
+                    <td style="background-color: #F2994A;">PLO18</td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO1
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO2
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO3
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO4
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO5
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO6
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO7
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO8
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO9
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO10
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+            </tbody>
+        </table>
+        
+
+        <table class="plo tbl-data">
+            <thead>
+                <th colspan="21">Mapping of CLOs to PLOs of Curriculum BIT_AI</th>
+            </thead>
+            <tbody>
+                <tr class="header_PLO">
+                    <td style="background-color: #F2994A;" rowspan="2">CLO</td>
+                    <td style="background-color: #F2994A;" colspan="19">PLOs</td>
+                </tr>
+                <tr class="header_PLO">
+                    
+                    <td style="background-color: #F2994A;">PLO1</td>
+                    
+                    <td style="background-color: #F2994A;">PLO2</td>
+                    
+                    <td style="background-color: #F2994A;">PLO3</td>
+                    
+                    <td style="background-color: #F2994A;">PLO4</td>
+                    
+                    <td style="background-color: #F2994A;">PLO5</td>
+                    
+                    <td style="background-color: #F2994A;">PLO6</td>
+                    
+                    <td style="background-color: #F2994A;">PLO7</td>
+                    
+                    <td style="background-color: #F2994A;">PLO8</td>
+                    
+                    <td style="background-color: #F2994A;">PLO9</td>
+                    
+                    <td style="background-color: #F2994A;">PLO10</td>
+                    
+                    <td style="background-color: #F2994A;">PLO11</td>
+                    
+                    <td style="background-color: #F2994A;">PLO12</td>
+                    
+                    <td style="background-color: #F2994A;">PLO13</td>
+                    
+                    <td style="background-color: #F2994A;">PLO14</td>
+                    
+                    <td style="background-color: #F2994A;">PLO15</td>
+                    
+                    <td style="background-color: #F2994A;">PLO16</td>
+                    
+                    <td style="background-color: #F2994A;">PLO17</td>
+                    
+                    <td style="background-color: #F2994A;">PLO18</td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO1
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO2
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO3
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO4
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO5
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO6
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO7
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO8
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO9
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        CLO10
+                    </td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td style="font-weight: bolder">✓</td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                    <td></td>
+                    
+                </tr>
+                
+            </tbody>
+        </table>
+        
+        <br />
+        <button class="margin-bot-10 btn btn-primary btn-blue ml-1 fs-inherit" id="btnDownloadAllTeacherMaterial">Download All Teacher Material</button>
+        <button class="margin-bot-10 btn btn-primary btn-blue ml-1 fs-inherit" id="btnDownloadAllStudentMaterial">Download All Student Material</button>
+        <span id="lblMessageSche" style="color:#23AC68;">30 sessions (90'/session)</span>
+
+        <div>
+	<table class="table table-striped tbl-data" cellspacing="0" rules="all" border="1" id="gvSchedule" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">SessionNo</th><th scope="col">Topic</th><th scope="col">LO</th><th scope="col">ITU</th><th scope="col">StudentMaterials</th><th scope="col">S-Download</th><th scope="col">TeacherMaterials</th><th scope="col">T-Download</th><th scope="col">Activity</th><th scope="col">URLs</th><th scope="col">LecturerTasks</th><th scope="col">LTMethod</th>
+		</tr><tr>
+			<td>1</td><td>Chapter 1: Introduction<br/>1.1. What is an operating system<br/>1.2. History of operating system</td><td>LO1</td><td>I</td><td>Textbook/References<br/>Slides</td><td><a class="ContainSLink" href="../../../download/5166/S/1_OSG202.zip">OSG202</a></td><td>Textbook/References Slides</td><td><a class="ContainTLink" href="../../../download/5166/T/1_OSG202.zip">OSG202</a></td><td>Read chapter 1 in the Textbook<br/>Focus on 1.1, 1.2</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>2</td><td>1.3. Computer hardware review<br/>Chapter 1 Problems</td><td>LO1</td><td>ITU</td><td>Textbook/References<br/>Slides</td><td><a class="ContainSLink" href="../../../download/5166/S/2_OSG202.zip">OSG202</a></td><td>Textbook/References<br/>Slides</td><td><a class="ContainTLink" href="../../../download/5166/T/2_OSG202.zip">OSG202</a></td><td>Read chapter 1 in the textbook</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>3</td><td>Overview of Linux Operating system<br/>Overview of Linux Command<br/>Short practice of using Linux OS</td><td>LO7, LO8, LO9</td><td>TU</td><td>Tutorial Labs</td><td>&nbsp;</td><td>Tutorial Labs</td><td>&nbsp;</td><td>Research Internet/Textbook/References at home in advance<br/>Do practice</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>4</td><td>1.4 The Operating System Zoo<br/>1.5 Operating System Concepts<br/>1.6 System Calls<br/>1.7 Operating System Structure</td><td>LO1</td><td>IT</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Read chapter 1 in the textbook<br/>Focus on 1.4, 1.5, 1.7</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>5</td><td>- Chapter 1 Problems<br/>- Guiding Lab 1</td><td>LO1, LO7, LO8, LO9</td><td>U</td><td>Tutorial Labs</td><td>&nbsp;</td><td>Tutorial Labs</td><td>&nbsp;</td><td>Do Lab</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>6</td><td>Chapter 2: Processes and Threads<br/>2.1 Processes<br/>2.2 Threads<br/>2.3 Interprocess Communication</td><td>LO2</td><td>ITU</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Read chapter 2 in the textbook<br/>Focus on 2.1, 2.2</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>7</td><td>- Chapter 2 Problems<br/>- Review Lab 1<br/>- Guiding Lab 2</td><td>LO2, LO7, LO8, LO9</td><td>U</td><td>Tutorial Labs</td><td>&nbsp;</td><td>Tutorial Labs</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>8</td><td>- Chapter 2 Problems<br/>2.4 Scheduling</td><td>LO2, LO7, LO8, LO9</td><td>TU</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Read chapter 2 in the textbook<br/>Focus on 2.4</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>9</td><td>2.5 Classical IPC Problems<br/>- Chapter 2 Problems</td><td>LO2, LO7, LO8, LO9</td><td>TU</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>10</td><td>Shell programming<br/>Practice shell programming</td><td>LO7, LO8, LO9</td><td>T</td><td>Tutorial Labs</td><td>&nbsp;</td><td>Tutorial Labs</td><td>&nbsp;</td><td>Do lab</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>11</td><td>Practice shell programming</td><td>LO7, LO8, LO9</td><td>U</td><td>Tutorial Labs</td><td>&nbsp;</td><td>Tutorial Labs</td><td>&nbsp;</td><td>Do lab</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>12</td><td>- Review Lab 2 <br/>- Chapter 2 Problems<br/>Chapter 3: Memory management<br/>3.1 No Memory Abstraction<br/>3.2 A Memory Abstraction: Address Spaces</td><td>LO3, LO8</td><td>T</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Read chapter 3 in the textbook<br/>Focus on 3.2</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>13</td><td>3.3 Virtual Memory<br/>3.4 Page Replacement Algorithms</td><td>LO3, LO8</td><td>T</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Read chapter 3 in the textbook<br/>Focus on 3.3, 3.4</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>14</td><td>Guiding Presentation - topic&#39;s selection<br/>- Chapter 7: Virtuallization and The Cloud<br/>- Chapter 10: CASE STUDY 1: UNIX, LINUX, and ANDROID<br/>- Chapter 11: CASE STUDY 2: WINDOWS 8</td><td>LO3, LO8</td><td>I</td><td>Textbook/References<br/>Tutorial Labs</td><td>&nbsp;</td><td>Textbook/References<br/>Tutorial Labs</td><td>&nbsp;</td><td>Working in group<br/>Do lab</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>15</td><td>3.5 Design Issues for Paging Systems<br/>3.6 Implementation Issues<br/>3.7 Segmentation</td><td>LO3, LO8</td><td>T</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Read chapter 3 in the textbook<br/>Focus on 3.5, 3.7</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>16</td><td>- Chapter 3 Problems<br/>- Guilding lab 3</td><td>LO3, LO8</td><td>TU</td><td>Textbook/References</td><td>&nbsp;</td><td>Textbook/References</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>17</td><td>- Chapter 3 Problems<br/>Progress Test 1 and Review<br/>Review Problems</td><td>LO3, LO8</td><td>TU</td><td>Tutorial Labs</td><td>&nbsp;</td><td>Tutorial Labs</td><td>&nbsp;</td><td>Do Lab</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>18</td><td>Chapter 4: Files<br/>4.1 Files<br/>4.2 Directories<br/>4.3 File System Implementation<br/>4.4 File System Management and Optimization<br/>4.5 Example File Systems</td><td>LO4, LO9, LO10</td><td>IT</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Read chapter 4 in the textbook<br/>Focus on 4.1, 4.2, 4.3, 4.4.</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>19</td><td>- Review Lab 3<br/>- Guiding Lab 4 <br/>- Chapter 4 Problems</td><td>LO4, LO9, LO10</td><td>U</td><td>Tutorial Labs</td><td>&nbsp;</td><td>Tutorial Labs</td><td>&nbsp;</td><td>Do Lab</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>20</td><td>C programming in Linux<br/>Guiding Lab</td><td>LO4, LO9, LO10</td><td>T</td><td>Tutorial Labs</td><td>&nbsp;</td><td>Tutorial Labs</td><td>&nbsp;</td><td>Do Lab</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>21</td><td>Chapter 5: Input/ Output<br/>5.1 Principles of I/O Hardware<br/>5.2 Principles of I/O Software</td><td>LO4, LO5, LO9, LO10</td><td>U</td><td>Textbook/References<br/>Slides<br/>Tutorial Labs</td><td>&nbsp;</td><td>Textbook/Reference<br/>Slides<br/>Tutorial Labs</td><td>&nbsp;</td><td>Do Lab<br/>Read chapter 5 in the textbook<br/>Focus on 5.1, 5.2</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>22</td><td>5.3 I/O Software Layers<br/>5.4 Disks</td><td>LO5, LO10</td><td>TU</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Read chapter 5 in the textbook<br/>Focus on 5.3, 5.4</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>23</td><td>5.5 Clocks<br/>5.6 User Intrefaces: Keyboard, Mouse, Monitor</td><td>LO5, LO10</td><td>TU</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Read chapter 5 in the textbook<br/>Focus on 5.6</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>24</td><td>5.7 Thin Clients<br/>5.8 Power Management<br/>- Review lab 4 <br/>- Chapter 5 Problems</td><td>LO5, LO10</td><td>TU</td><td>Tutorial Labs</td><td>&nbsp;</td><td>Tutorial Labs</td><td>&nbsp;</td><td>Read chapter 5 in the textbook<br/>Focus on 5.8<br/>Do Lab</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>25</td><td>Chapter 6: Deadlock<br/>6.1 Resources<br/>6.2 Introduction to Deadlocks<br/>6.3 The Ostrich Algorithm<br/>6.4 Deadlock Detection and Recovery</td><td>LO6, LO9, LO10</td><td>IT</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Textbook/References<br/>Slides</td><td>&nbsp;</td><td>Read chapter 6 in the textbook<br/>Focus on 6.1, 6.2, 6.4</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>26</td><td>6.5 Deadlock Avoidance<br/>6.6 Deadlock Prevention<br/>6.7 Other Issues<br/>- Chapter 6 Problems</td><td>LO6, LO9, LO10</td><td>ITU</td><td>Textbook/References<br/>Slides<br/>Tutorial Labs</td><td>&nbsp;</td><td>Textbook/References<br/>Slides<br/>Tutorial Labs</td><td>&nbsp;</td><td>Read chapter 6 in the textbook<br/>Focus on  6.5, 6.6</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>27</td><td>Guiding Problems<br/>Progress Test 2 and Review<br/>Review Problems</td><td>LO6, LO9, LO10</td><td>TU</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>28</td><td>Chapter 7, 10, 11 Presentation</td><td>&nbsp;</td><td>T</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>29</td><td>Chapter 7, 10, 11 Presentation</td><td>&nbsp;</td><td>T</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr><tr>
+			<td>30</td><td>Discussion of current research areas. Review Course</td><td>&nbsp;</td><td>I, T</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Offline</td>
+		</tr>
+	</table>
+</div>
+        <br />
+        <span id="blbMessageCQ" style="color:#23AC68;">63 Constructive question(s)</span>
+
+        <div>
+	<table class="table table-striped" cellspacing="0" rules="all" border="1" id="gvCQ" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">&nbsp;</th><th scope="col">Session No</th><th scope="col">Name</th><th scope="col">Details</th>
+		</tr><tr>
+			<td align="center" style="width:3%;">1</td><td align="center" style="width:7%;">2</td><td style="width:15%;">CQ1</td><td style="width:75%;">What happens if a computer doesn&#39;t have an operating system? Why?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">2</td><td align="center" style="width:7%;">2</td><td style="width:15%;">CQ2</td><td style="width:75%;">The operating system has gone through 5 generations. What are your thoughts on the 6th generation operating system? What is the basis for these arguments?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">3</td><td align="center" style="width:7%;">2</td><td style="width:15%;">CQ3</td><td style="width:75%;">Why does an OS need a process tree? Without this process tree, how will the operating system handle it?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">4</td><td align="center" style="width:7%;">2</td><td style="width:15%;">CQ4</td><td style="width:75%;">What is the mechanism by which a computer can understand a new device?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">5</td><td align="center" style="width:7%;">3</td><td style="width:15%;">CQ1</td><td style="width:75%;">What is the latest and greatest version of Ubuntu specification?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">6</td><td align="center" style="width:7%;">3</td><td style="width:15%;">CQ2</td><td style="width:75%;">Open source code is all open source code for users to edit. How can the author protect the copyright of the software?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">7</td><td align="center" style="width:7%;">3</td><td style="width:15%;">CQ3</td><td style="width:75%;">What feature when installing ubuntu that windows does not have?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">8</td><td align="center" style="width:7%;">4</td><td style="width:15%;">CQ1</td><td style="width:75%;">What if a running process is being taken over by another process? Are there any options that can be addressed?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">9</td><td align="center" style="width:7%;">4</td><td style="width:15%;">CQ2</td><td style="width:75%;">Instructions relating to accessing I / O devices are usually privileged instructions, meaning that they can be executed in kernel mode but not in user mode. Give the reason why these tutorials are privileged?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">10</td><td align="center" style="width:7%;">4</td><td style="width:15%;">CQ3</td><td style="width:75%;">There are several design goals in building an operating system, for example, using resources, power, etc. Give an example of two possibly conflicting design goals, re-expressing why they are contradictory.</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">11</td><td align="center" style="width:7%;">4</td><td style="width:15%;">CQ4</td><td style="width:75%;">Modern operating systems separate an address space from the machine&#39;s physical memory. Can you list what the advantages of this design are? (List at least 2 advantages)</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">12</td><td align="center" style="width:7%;">5</td><td style="width:15%;">CQ1</td><td style="width:75%;">What commands can be run on teminar but command promt or powershell cannot run?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">13</td><td align="center" style="width:7%;">5</td><td style="width:15%;">CQ2</td><td style="width:75%;">What commands can be used to control another computer in SSH? Illustrate the command control process. (Screenshot attached)</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">14</td><td align="center" style="width:7%;">6</td><td style="width:15%;">CQ1</td><td style="width:75%;">In Fig. 2-2, three process statuses are displayed. In theory, with three states, there could be six transitions, two of each. However, only four transitions are displayed. Are there any cases where either or both of the missing conversions might occur?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">15</td><td align="center" style="width:7%;">6</td><td style="width:15%;">CQ2</td><td style="width:75%;">In modern computers it is assumed that at least one part of the interrupt handler program is written in Assembly language. In your opinion, is the above statement true or false and why?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">16</td><td align="center" style="width:7%;">6</td><td style="width:15%;">CQ3</td><td style="width:75%;">A computer system has enough space to hold five programs in its main memory. These programs are waiting for I / O to be inactive for half the time. What part of CPU time is wasted? Why?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">17</td><td align="center" style="width:7%;">6</td><td style="width:15%;">CQ4</td><td style="width:75%;">Consider a multi-program system with 6 programs in memory at the same time. Assume that each process spends 40% of its time waiting for I / O. What will CPU usage be like?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">18</td><td align="center" style="width:7%;">7</td><td style="width:15%;">CQ1</td><td style="width:75%;">What special case must use parameter passing in the script?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">19</td><td align="center" style="width:7%;">7</td><td style="width:15%;">CQ2</td><td style="width:75%;">Why don&#39;t new terminals need to add &quot;#!/bin/bash&quot; before shell scripts? Is there any difference in this usage? Explain.</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">20</td><td align="center" style="width:7%;">8</td><td style="width:15%;">CQ1</td><td style="width:75%;">Consider a system in which threads are executed entirely in user space, with the system running one interrupt every second. Assume that an interrupt occurs while some thread is executing in the system runtime. What problems can happen? Can you suggest a way to solve it?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">21</td><td align="center" style="width:7%;">8</td><td style="width:15%;">CQ2</td><td style="width:75%;">Peterson&#39;s solution to the mutual exclusion problem, is presented in FIG. 2-24, active when process scheduling is prioritized? How about when it is without priority?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">22</td><td align="center" style="width:7%;">8</td><td style="width:15%;">CQ3</td><td style="width:75%;">Can the priority inversion issue that discussed in Section. 2.3.4 happen to user-level threads? Why or why not?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">23</td><td align="center" style="width:7%;">8</td><td style="width:15%;">CQ4</td><td style="width:75%;">If a system has only two processes, would it make sense to use a barrier to synchronize them? Why or why not?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">24</td><td align="center" style="width:7%;">10</td><td style="width:15%;">CQ1</td><td style="width:75%;">How to make shell script executable from anywhere in terminal?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">25</td><td align="center" style="width:7%;">10</td><td style="width:15%;">CQ2</td><td style="width:75%;">Is it possible to use real numbers (float data type) in terminal? Why?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">26</td><td align="center" style="width:7%;">10</td><td style="width:15%;">CQ3</td><td style="width:75%;">In what cases is it mandatory to use &quot;case...esac&quot; but not &quot;if...else...fi&quot;? Give an illustrative example.</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">27</td><td align="center" style="width:7%;">12</td><td style="width:15%;">CQ1</td><td style="width:75%;">In Figure 3-3, the base register and the limit register contain the same value, 16,384. Is this just a bug, or are they always the same? It&#39;s just an accident, why are they the same in this example?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">28</td><td align="center" style="width:7%;">12</td><td style="width:15%;">CQ2</td><td style="width:75%;">Consider a swap system in which memory consists of the following hole sizes in memory order: 10 MB, 4 MB, 20 MB, 18 MB, 7 MB, 9 MB, 12 MB and 15. MB.
+Any hole is made for consecutive segment&#39;s requirements
+(a) 12 MB
+(b) 10 MB
+(c) 9 MB
+for the first match? Now repeat the question for the next best match.</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">29</td><td align="center" style="width:7%;">13</td><td style="width:15%;">CQ1</td><td style="width:75%;">What is the difference between a real address and a virtual address? If you have suggestions, would you like to add another one?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">30</td><td align="center" style="width:7%;">13</td><td style="width:15%;">CQ2</td><td style="width:75%;">&quot;Copy on write&quot; is an interesting idea used on the server system. What does it mean on a smartphone?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">31</td><td align="center" style="width:7%;">13</td><td style="width:15%;">CQ3</td><td style="width:75%;">If an instruction occupies 1 nsec and the page error takes n nsec more, please come up with the formula for effective instruction time if a page error occurs every k commands.</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">32</td><td align="center" style="width:7%;">15</td><td style="width:15%;">CQ1</td><td style="width:75%;">The computer has a 32-bit address using a two-level page table. The virtual address is divided into a 9-bit top-level page table field, an 11-bit second-level page table field, and the offset. What is the size of the pages and how many pages are in the address space?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">33</td><td align="center" style="width:7%;">15</td><td style="width:15%;">CQ2</td><td style="width:75%;">A computer has 32-bit virtual addresses and 4 KB pages. Program and data match on the lowest page (0–4095). How many entries in the page table are required if traditional (single-level) pagination is used? How many paging table entries are required for two-level paging, with 10 bits in each section?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">34</td><td align="center" style="width:7%;">16</td><td style="width:15%;">CQ1</td><td style="width:75%;">How can the combined memory device needed for the TLB be implemented in hardware and what is the implications of such a design for scalability?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">35</td><td align="center" style="width:7%;">16</td><td style="width:15%;">CQ2</td><td style="width:75%;">A student in a compiler design course proposes to the professor a compiler writing project that will generate a list of page references that can be used to implement the optimal page replacement algorithm. Is this possible? Why or why not? Is there anything that can be done to improve paging efficiency at runtime?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">36</td><td align="center" style="width:7%;">18</td><td style="width:15%;">CQ1</td><td style="width:75%;">Sequential file support systems always have file rewind. Do systems that support random access files need this?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">37</td><td align="center" style="width:7%;">18</td><td style="width:15%;">CQ2</td><td style="width:75%;">Some operating systems offer renaming system calls to give the file a new name. Is there a difference between using this call to rename a file and just copying the file to a new file with the new name, then deleting the old one?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">38</td><td align="center" style="width:7%;">18</td><td style="width:15%;">CQ3</td><td style="width:75%;">A simple operating system supports only a single directory but allows it to have arbitrary files with arbitrarily long filenames. Is it possible to emulate something close to the hierarchical file system? How?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">39</td><td align="center" style="width:7%;">18</td><td style="width:15%;">CQ4</td><td style="width:75%;">Consider node i shown in FIG. 4-13. If it contains 10 direct addresses and each address has 8 bytes and all disk blocks are 1024 KB in size, what is the largest file possible?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">40</td><td align="center" style="width:7%;">19</td><td style="width:15%;">CQ1</td><td style="width:75%;">For an external USB hard drive attached to a computer, which one is better: write-through cache or block cache?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">41</td><td align="center" style="width:7%;">19</td><td style="width:15%;">CQ2</td><td style="width:75%;">In many UNIX systems, the i buttons are kept at the top of disk. An alternative design is to allocate a node i when the file is created and place node i at the top of the file&#39;s first block. Discuss the pros and cons of this workaround.</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">42</td><td align="center" style="width:7%;">21</td><td style="width:15%;">CQ1</td><td style="width:75%;">Advances in chip technology have allowed the entire controller, including all bus access logic, to be placed on an inexpensive chip. How does that affect the model of Fig 1-6?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">43</td><td align="center" style="width:7%;">21</td><td style="width:15%;">CQ2</td><td style="width:75%;">Explain the balance between precise interrupt and incorrect interrupt on supperscalar machine?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">44</td><td align="center" style="width:7%;">21</td><td style="width:15%;">CQ3</td><td style="width:75%;">With the speeds listed in Figure 5-1, is it possible to scan documents from the scanner and transmit them over the 802.11g network at full speed? Why?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">45</td><td align="center" style="width:7%;">22</td><td style="width:15%;">CQ1</td><td style="width:75%;">Assume that a computer can read or write one from 5 nsec internal memory. Also assume that when an interrupt occurs, all 32 CPU registers, plus the program counter and PSW, are pushed onto the stack. What is the maximum number of interrupts per second this machine can handle?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">46</td><td align="center" style="width:7%;">22</td><td style="width:15%;">CQ2</td><td style="width:75%;">CPU architects know that operating system writers hate inaccurate interrupts. One way to please the user of the operating system is that the CPU stops issuing new instructions when the interrupt is signaled, but allows all instructions currently being executed to terminate, then forces the interrupt. Does this approach have any disadvantages? Why?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">47</td><td align="center" style="width:7%;">22</td><td style="width:15%;">CQ3</td><td style="width:75%;">Compare RAID 0 to 5 for read/write performance, space cost and reliability</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">48</td><td align="center" style="width:7%;">23</td><td style="width:15%;">CQ1</td><td style="width:75%;">After receiving a DEL (SIGINT) character, the screen driver removes all outputs currently queued for that display. Why?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">49</td><td align="center" style="width:7%;">23</td><td style="width:15%;">CQ2</td><td style="width:75%;">The main additive colors are red, green and blue, which means any color can be produced from linear superposition of these colors. Is it possible someone has a color photo that cannot be represented in full 24-bit color?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">50</td><td align="center" style="width:7%;">23</td><td style="width:15%;">CQ3</td><td style="width:75%;">In Figure 5-36 there is a class to RegisterClass. In the corresponding Window X code, in Fig 5-34, there is no such call or anything like that. Why not?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">51</td><td align="center" style="width:7%;">24</td><td style="width:15%;">CQ1</td><td style="width:75%;">What are the pros and cons of thin clients?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">52</td><td align="center" style="width:7%;">24</td><td style="width:15%;">CQ2</td><td style="width:75%;">A thin-client terminal is used to render a Web page containing 400 pixels by 160 pixels of animation running at 10 frames per second. What percentage of Fast Ethernet 100 Mbps is consumed when displaying cartoons?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">53</td><td align="center" style="width:7%;">24</td><td style="width:15%;">CQ3</td><td style="width:75%;">Laptops are set up to take full advantage of power saving features including turning off the screen and hard disk after periods of inactivity. The user sometimes runs UNIX programs in text mode and other times uses the Windows X System. She is surprised to find that the battery life is significantly better when she uses only programs. document. Why?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">54</td><td align="center" style="width:7%;">25</td><td style="width:15%;">CQ1</td><td style="width:75%;">Students working with personal computers in the computer lab send their files to be printed by a server that damages files on the hard disk. Under what conditions can a deadlock occur if the disk space for the print tube is limited? How can deadlock be avoided?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">55</td><td align="center" style="width:7%;">25</td><td style="width:15%;">CQ2</td><td style="width:75%;">In Figure 6-1, resources are returned in the reverse order of their acquisition. Is it good to return them in another order?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">56</td><td align="center" style="width:7%;">25</td><td style="width:15%;">CQ3</td><td style="width:75%;">Is it possible for a resource deadlock involving multiple units of one type and a single unit of another? If so, please give an example.</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">57</td><td align="center" style="width:7%;">26</td><td style="width:15%;">CQ1</td><td style="width:75%;">The ostrich algorithm discussion refers to the ability of progress board to fill slots or other system boards. Can you suggest a way to allow a system administrator to recover from such a situation?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">58</td><td align="center" style="width:7%;">26</td><td style="width:15%;">CQ2</td><td style="width:75%;">Can use the resource trajectory scheme in Fig. 6-8 to illustrate the deadlock problem with three processes and three resources? If so, how can this be done? If not, why not?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">59</td><td align="center" style="width:7%;">26</td><td style="width:15%;">CQ3</td><td style="width:75%;">Assume that process A in Figure 6-12 requires the final tape drive. Will this action lead to a standoff?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">60</td><td align="center" style="width:7%;">28</td><td style="width:15%;">CQ1</td><td style="width:75%;">The main memory units have a priority in swap systems and virtual memory. Processors are given priority in a time-sharing environment. Do you think these preemption methods were developed to deal with resource bottlenecks or for other purposes? How high are their costs?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">61</td><td align="center" style="width:7%;">28</td><td style="width:15%;">CQ2</td><td style="width:75%;">Explain the differences between deadlock, livelock, and starvation.</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">62</td><td align="center" style="width:7%;">29</td><td style="width:15%;">CQ1</td><td style="width:75%;">Is there any difference in solving a problem with a shell command and a command in C?</td>
+		</tr><tr>
+			<td align="center" style="width:3%;">63</td><td align="center" style="width:7%;">29</td><td style="width:15%;">CQ2</td><td style="width:75%;">In programming with IDE with programming with files and using libraries to compile, which way is better and faster? Given the advantages of the two methods, can you suggest other methods?</td>
+		</tr>
+	</table>
+</div>
+        <br />
+        <span id="lblMessageAsse" style="color:#23AC68;">4 assessment(s)</span>
+
+        <div>
+	<table class="table table-striped tbl-data" cellspacing="0" rules="all" border="1" id="gvAssessment" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">Category</th><th scope="col">Type</th><th scope="col">Part</th><th scope="col">Weight</th><th scope="col">Completion Criteria</th><th scope="col">Duration</th><th scope="col">CLO</th><th scope="col">Question Type</th><th scope="col">No Question</th><th scope="col">Knowledge and Skill</th><th scope="col">Grading Guide</th><th scope="col">Note</th>
+		</tr><tr>
+			<td>Lab</td><td>on-going</td><td>4</td><td>20.0%</td><td>>0</td><td>in lab session</td><td>LO7, LO8, LO9, LO10</td><td>practical exercises</td><td>N/A</td><td>technical aspect of studied topics</td><td>guided by instructor</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>Presentation</td><td>on-going</td><td>1</td><td>20.0%</td><td>>0</td><td>~20&#39;/group</td><td>LO1, LO2, LO3, LO4, LO5, LO6</td><td>&nbsp;</td><td>N/A</td><td>a selelected topic</td><td>prepare at home, working in group, present in class hours</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>Progress test</td><td>on-going</td><td>2</td><td>20.0%</td><td>>0</td><td>10&#39;-30&#39;</td><td>LO1, LO2, LO3, LO4, LO5, LO6</td><td>Multiple choicesMarked by Computer or a suitable format</td><td>10-30 (At least 10*n questions where n is the number of Chapters covered in the test.)</td><td>Current chapter(s)<br/>Each Progess Test covers at least 01 Chapter and at most 03 Chapters, and overall they must cover all learned Chapters of the course.</td><td>in class/remote, by instructor<br/></td><td>Instruction and shedules for Progress tests must be presented in the  Course Implementation Plan approved by director of the campus. <br/><br/>Progress test must be taken right after the last lectures of required material. <br/><br/>Instructor has resposibility to review the test for students after graded.</td>
+		</tr><tr>
+			<td>Final exam</td><td>final exam</td><td>1</td><td>40.0%</td><td>4</td><td>60&#39; </td><td>LO1, LO2, LO3, LO4, LO5, LO6</td><td>Multiple choicesMarked by Computer</td><td>50</td><td>concepts, algorithms; <br/>All chapters from 1 to 6; more than 70% new questions (for the current semester);<br/></td><td>by exam board,</td><td>&nbsp;</td>
+		</tr>
+	</table>
+</div>
+        <br />
+
+    </div>
+    <script src="/bundles/customjs"></script>
+    <script>
+        $(document).ready(() => {
+            if ($("tbody tr a.ContainSLink").toArray().length == 0) {
+                $("#btnDownloadAllStudentMaterial").prop("disabled", true);
+            } else {
+                $("#btnDownloadAllStudentMaterial").prop("disabled", false);
+            }
+
+            if ($("tbody tr a.ContainTLink").toArray().length == 0) {
+                $("#btnDownloadAllTeacherMaterial").prop("disabled", true);
+            } else {
+                $("#btnDownloadAllTeacherMaterial").prop("disabled", false);
+            }
+        })
+        function downloadLoop(i, urls) {
+            setTimeout(() => {
+                urls[i].click();
+                i++;
+                if (i < urls.length) {
+                    downloadLoop(i, urls);
+                }
+            }, 10456)
+        }
+        $('#btnDownloadAllTeacherMaterial').on('click', function (e) {
+            e.preventDefault();
+            var downloadLinks = $("tbody tr a.ContainTLink").toArray();
+            var result = confirm("Do you want to download all materials?");
+            if (result) {
+                downloadLoop(0, downloadLinks);
+            }
+        })
+        $('#btnDownloadAllStudentMaterial').on('click', function (e) {
+            e.preventDefault();
+            var downloadLinks = $("tbody tr a.ContainSLink").toArray();
+            var result = confirm("Do you want to download all materials??");
+            if (result) {
+                downloadLoop(0, downloadLinks);
+            }
+        })
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>
+
+                </div>
+
+            </div>
+        </div>
+
+    </form>
+
+    <script>
+
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('sb-active');
+            });
+            var lang = 'en';
+            $('#language').val(lang);
+            $('#language').change(function () {
+                $.ajax({
+
+                    url: '/Language', // comma here instead of semicolon  
+                    data: { language: $(this).val() },
+                    success: function () {
+                        window.location.reload();
+                    }
+
+                });
+            })
+
+            toastr.options = {
+                "closeButton": true,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            if (window.localStorage.getItem('typeToast') == 1) {
+                toastr.success(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+            if (window.localStorage.getItem('typeToast') == 2) {
+                toastr.error(window.localStorage.getItem('messToast'));
+                window.localStorage.setItem('typeToast', 0);
+            }
+        });
+        function showToastRedirectPage(type, mess) {
+            window.localStorage.setItem('typeToast', type);
+            window.localStorage.setItem('messToast', mess);
+        }
+    </script>
+</body>
+
+</html>

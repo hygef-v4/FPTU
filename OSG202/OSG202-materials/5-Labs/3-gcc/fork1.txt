@@ -1,0 +1,21 @@
+#include <sys/types.h> 
+#include <unistd.h> 
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) 
+{ 
+	
+	int i;
+    for (i=0; i < 3; i++) {
+    int id = fork();
+	if(id != 0) {
+		printf("This process is running under parent process \n");
+    }
+	else {
+        printf("This process id = %d, is a child process of parent process id = %d\n", getpid(),getppid());
+	}
+	return 0;
+}
+  
+}

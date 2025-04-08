@@ -1,0 +1,5 @@
+gcc_online:
+https://rextester.com/l/c_online_compiler_gcc
+
+What is a semaphore? How do they work? (Example in C)
+https://www.youtube.com/watch?v=ukM_zzrIeXs

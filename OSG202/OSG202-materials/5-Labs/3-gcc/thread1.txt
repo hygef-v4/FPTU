@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+void * incrementval (void *param);
+int val;
+int main() {
+val = 1;
+pthread_t tid; /* the thread identifier */
+pthread_create(&tid, NULL, incrementval, NULL);
+	
+/* wait for the thread to exit */
+pthread_join (tid, NULL);
+val = val + 1;
+printf("in the main thread, val = %d\n", val);
+}
+
+/* The thread will begin control in this function */
+/*gcc -pthread -o 1.o 1.c*/
+void * incrementval (void *param)
+{
+val = val + 1;
+printf("in child thread, val = %d\n", val);
+
+	pthread_exit(0);
+}
