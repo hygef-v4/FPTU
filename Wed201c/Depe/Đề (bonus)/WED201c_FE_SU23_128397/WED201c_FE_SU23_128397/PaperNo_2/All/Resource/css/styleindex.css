@@ -1,0 +1,115 @@
+.header{
+    display: flex;
+    align-items: flex-end;
+    margin: 1% auto;
+    
+}
+
+.header-text{
+    text-align: center;
+    
+}
+
+.header-text h3{
+    color: red;
+    font-style: italic;
+    font-size: medium;
+}
+
+
+.header-logo{
+    text-align: center;
+}
+
+.header-logo img{
+    width: 30%;
+    height: 100px;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    background-color: #0EC0C3;
+    height: 50px;
+}
+
+body{
+    padding: 0px;
+}
+
+.description h1{
+    text-align: center;
+    color: #0EC0C3;
+    margin: 2% auto;
+}
+
+.description p{
+    font-size: 17px;
+    margin-left: 3%
+}
+
+.img-left div img{
+    width: 40%;
+
+}
+
+.img-left div{
+    text-align: end;
+}
+
+.img-right img{
+    width: 70%;
+
+}
+
+.img-both{
+    margin: 20px auto; 
+}
+
+.best-seller-text{
+    text-align: center;
+    color: #0EC0C3;
+}
+
+.best-seller-content{
+    display: flex;
+    justify-content: center;
+}
+
+.content-left{
+    padding: 0px;
+}
+
+.content-right img{
+    width: 300px;
+    height: 256px;
+}
+
+.content-full{
+    padding: 0px 15%;
+}
+
+.customer-title{
+    text-align: center;
+    color: #0EC0C3;
+}
+
+.customer-content{
+    margin: auto 5%;
+}
+
+.footer{
+    background-color: #0EC0C3;
+    text-align: center;
+    color: white;
+    padding: 1%;
+    margin-top: 1%;
+}
+body{
+    padding: 0px; 
+    margin: 0px;
+}
+
+.container-body{
+    padding: 0px;
+}

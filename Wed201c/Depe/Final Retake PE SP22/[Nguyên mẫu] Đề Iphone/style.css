@@ -1,0 +1,45 @@
+.config1{
+    display: flex;
+    list-style: none;
+}
+.config2{
+    margin-right: 40px;
+    margin-top: 10px;
+    font-weight: bold;
+
+}
+.confix21{
+    text-decoration: none;
+    color: black;
+}
+.config3{
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.config4{
+    height: 75px;
+}
+.config5{
+    width: 100%;
+}
+.backgr1{
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(243, 107, 9)
+}
+.backg2{
+    color: rgb(0, 110, 255);
+    text-align: center;
+    margin-top: 25px;
+}
+.centter{
+    text-align: center;
+}
+.final{
+    background-color: rgb(32, 29, 29);
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}

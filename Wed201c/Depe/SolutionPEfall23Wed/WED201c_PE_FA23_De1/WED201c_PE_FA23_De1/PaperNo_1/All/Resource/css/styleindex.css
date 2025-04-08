@@ -1,0 +1,87 @@
+.header-logo {
+  display: flex;
+  justify-content: center;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  background-color: #0ec0c3;
+  height: 50px;
+}
+.header-container {
+  padding: 0;
+  overflow-x: hidden;
+}
+.hungphat {
+  text-align: center;
+  color: #7ac0c4;
+  padding: 20px;
+}
+.hungphatimage img {
+  width: 100%;
+}
+.hungphat-text {
+  font-size: 25px;
+}
+.beautiful-text {
+  text-align: center;
+  margin: 30px auto;
+  color: #7ac0c4;
+}
+.img-location-big {
+  position: relative;
+  width: 100%;
+}
+.img-location {
+  width: 100%;
+  height: 205px;
+  margin-bottom: 30px;
+}
+.img-info-1 {
+  position: absolute;
+  top: -4px;
+  color: white;
+  padding-left: 10px;
+}
+.location {
+  position: relative;
+}
+.part4-title {
+  text-align: center;
+  color: #7ac0c4;
+  margin-bottom: 40px;
+}
+.img-part4 {
+  width: 100%;
+}
+.part4-text h3 {
+  text-align: center;
+  color: #ebb980;
+}
+.footer {
+  background-color: #4bbfc4;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  height: 100%;
+  padding: 10px 0px;
+}
+@media only screen and (max-width: 768px) {
+    .menu {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #0ec0c3;
+    height: max-content;
+  }
+  .img-location {
+    width: 100%;
+    height: max-content;
+    margin-bottom: 30px;
+  }
+  .img-location-big {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}

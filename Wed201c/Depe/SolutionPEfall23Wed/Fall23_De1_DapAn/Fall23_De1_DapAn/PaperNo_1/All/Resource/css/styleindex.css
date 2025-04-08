@@ -1,0 +1,90 @@
+.header-logo {
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
+.header-content {
+  color: #0ec0c3;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.content-hungphat-text {
+}
+
+.content-hungphat-img img {
+  width: 100%;
+}
+.img-location-big {
+  width: 100%;
+  height: 485px;
+}
+
+.loation:nth-child(1) .img-location,
+.loation:nth-child(2) .img-location {
+  width: 100%;
+  height: 230px;
+  margin-bottom: 25px;
+}
+
+.img-location {
+  width: 100%;
+  height: 230px;
+}
+
+.loation {
+  position: relative;
+}
+
+.loation-text {
+  color: white;
+  position: absolute;
+  left: 30px;
+  top: 0;
+}
+
+.house-img {
+  width: 100%;
+}
+
+.house-title {
+  text-align: center;
+  color: orange;
+}
+
+.footer {
+  background-color: #0ec0c3;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .content-hungphat-img {
+    margin-bottom: 10px;
+  }
+
+  .loation:nth-child(1) .img-location,
+  .loation:nth-child(2) .img-location {
+    height: 385px;
+  }
+
+  .img-location {
+    width: 100%;
+    height: 385px;
+    margin-bottom: 25px;
+  }
+
+  .list-img-2 {
+    margin-top: 20px;
+  }
+}

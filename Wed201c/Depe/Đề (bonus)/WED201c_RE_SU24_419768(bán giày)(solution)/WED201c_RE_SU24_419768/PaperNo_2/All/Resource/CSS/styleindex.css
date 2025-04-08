@@ -1,0 +1,192 @@
+.container{
+  padding: 0px;
+  margin: 0px;
+  
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+
+}
+.header-menu{
+    flex: 1;    
+}
+
+.header-menu ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    
+
+}
+
+.header-menu ul a{
+    text-decoration: none;
+    color: black;
+}
+
+.header-logo{
+    flex: 1; 
+    text-align: center;
+}
+
+.header-logo img{
+    width: 20%;
+    height: 90px;
+}
+
+
+.header-form{
+    flex: 1; 
+    text-align: center;
+}
+
+.header-form button{
+    background-color: black;
+    color: white;
+}
+
+.banner img{
+    width: 100%;
+    
+}
+
+.best-seller{
+    text-align: center;
+   
+}
+
+.best-seller-content{
+    display: flex;
+    gap: 1%;
+    justify-content: center;
+    margin: 2.5%;
+    
+}
+.best-seller-left{
+ 
+    justify-content: flex-end;
+}
+.best-seller-right{
+
+}
+
+.best-seller-left-big-img{
+    width: 595px;
+}
+.best-seller-left-small{
+    display: flex;
+    gap: 1%;
+}
+
+.best-seller-left-small img{
+    width: 145px; 
+}
+
+
+.shoes-options{
+    display: flex;
+    gap: 10px;
+}
+
+.shoes-color{
+    width: 80px;
+    border: 1px solid black;
+}
+
+
+.size{
+    display: flex;
+    gap: 2%;
+    padding: 0px 2%;
+}
+
+.size a{
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+
+.content-form{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0 50px;
+    height: 370px;
+}
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.form-input div input:not(.send){
+    padding: 10px 0px; 
+    width: 350px;
+}
+
+.send{
+    background-color: orangered;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    margin-bottom: 50px;
+}
+
+.discount{
+    color:rgb(231, 137, 14)
+}
+
+.content-title h1{
+    text-align: center;
+}
+
+.suggest-content{
+    display: flex;
+    justify-content: center; 
+    gap: 2%;
+    margin-bottom: 20px;
+}
+
+.shoes-suggest-box{
+    background-color: rgba(241, 214, 210, 0.709);
+    text-align: center;
+    padding: 10px;
+}
+
+.shoes-suggest-box h2{
+    color: rgb(231, 137, 14);
+}
+
+.footer{
+    background-color: rgba(0, 0, 0, 0.649);
+    padding: 10px 0px;
+    text-align: center;
+    color: white;
+ 
+
+}
+
+body {
+    margin: 0px 0px;
+
+}
+
+
+
+.send{
+    cursor: pointer;
+}

@@ -1,0 +1,96 @@
+body{
+    overflow-x: hidden;
+}
+.header-container{
+    padding: 0;
+}
+
+.header{
+    display: flex; 
+    align-items: flex-end;
+    
+}
+.header-title{
+    display: flex;
+    justify-content: center;
+}
+
+.header-title h3{
+    color: red; 
+    font-style: italic;
+}
+.header-logo{
+    display: flex;
+    justify-content: center;
+    margin: 10px auto; 
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    background-color: #10C0C1;
+    height: 50px;
+}
+.menu li.active{
+    background-color: orange;
+}
+
+.airblade h2{
+    text-align: center;
+    color: #10C0C1; 
+}
+.img-sub{
+    height: 205px;
+    padding: 5px 0px; 
+}
+.best-seller-title h1{
+    text-align: center;
+    color: #10C0C1; 
+}
+.motor-image{ 
+    width: 360px;
+    height: 342px; 
+}
+.best-seller-title h3{
+    
+    color: #d18e67; 
+}
+
+.info-title-1{
+    color: #10C0C1; 
+    text-align:  center;
+    padding-right: 200px;
+}
+.info-title-2{
+    color: #10C0C1; 
+    text-align:  center;
+}
+.footer{
+    text-align: center;
+    background: #10C0C1; 
+    color: white;
+    padding: 10px 0px;
+    margin-top: 15px;
+}
+@media only screen and (max-width: 426px){
+    .header{
+        flex-direction: column; 
+        align-items: center;
+    }
+    .menu{
+        justify-content: flex-end;
+        height: max-content; 
+    }
+    .navbar-header{
+        width: 100vw;
+    }
+    .img-sub{
+        width: 846px;
+        height: max-content;
+    }
+    .info-title-1{
+        padding-right: 0px;
+        color: #10C0C1; 
+        text-align:  center;
+    
+    }
+}

@@ -1,0 +1,164 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    margin-right: -16px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-list li{
+    list-style: none;
+    text-decoration: none;
+    margin: auto 20px;
+}
+.header-list li a{
+    text-decoration: none;
+    color: #8FBCBE;
+  
+}
+
+.header-list{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.but-search{
+    background-color: black;
+    color: white;
+}
+
+.img-logo{
+    width: 50%;
+}
+
+/* can le  */
+.header > div{
+    margin: auto 30px; 
+}
+.content-banner{
+    display: flex;
+    justify-content: center;
+}
+.content-banner img{
+    width: 45%;
+    height: 500px;
+}
+.content-title{
+    text-align: center;
+    color: rgb(19, 218, 188);
+}
+.content-detail p{
+    color: #dfaa40; 
+    font-style: italic;
+    margin: auto 25px; 
+    text-align: center;
+    
+    
+}
+.footer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #40A2C7;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: -8px;
+    margin-right: -23px;
+    
+}
+.footer h5{
+    width: 100%;
+    text-align: center;
+    
+}
+
+
+
+
+.favourite-tour-form{
+    display: flex;
+    justify-content: center;
+}
+.form-list{
+    border: 1px #0EC0C3 solid;
+    margin: 20px;
+    min-width: 30%;
+  
+    padding: 10px;
+   
+    
+}
+
+.form-list-header{
+    background-color: #0EC0C3;
+    color: white;
+    padding: 5%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-list-menu{
+    background-color: #E6E2E3;
+    padding: 1%;  
+    margin-bottom: 20px;
+    
+}
+
+#tour-price{  
+    margin: 3%;
+}
+
+.form-list-content{
+    
+    margin: 3%;
+    display: flex;
+    align-items: center;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+}
+
+.form-list-content label{
+    display: inline-block;
+    min-width: 25%
+}
+
+.form-list-content input{
+    padding: 10px 0px;
+    padding-right: 13%;
+    
+}
+
+.form-list-content select{
+    padding: 10px 0px;
+    padding-right: 21%;
+}
+
+.form-list-footer{
+    text-align: center;
+}
+
+
+.form-list-footer button{
+    background-color: orange;
+    border-radius: 10px;
+    padding: 10px 25px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#total-price{
+    background-color: #31891D;
+    padding: 20px 25px;
+    color: white;
+    margin: 2%;
+}
+
+
+

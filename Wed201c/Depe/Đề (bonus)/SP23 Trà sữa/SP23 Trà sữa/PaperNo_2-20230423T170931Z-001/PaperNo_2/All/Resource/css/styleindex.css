@@ -1,0 +1,13 @@
+.menu-list-item{
+    display: flex;
+    
+}
+
+.menu-list-item-name{
+    min-width:250px;
+}
+.order{
+    display: flex;
+    justify-content: center;
+    gap: 6%;
+}

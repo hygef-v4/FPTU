@@ -1,0 +1,208 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header-logo{
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+}
+.header-logo img{
+    width: 30%;
+    
+}
+
+.header-menu{
+    flex: 1; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-menu div ul{
+    display: flex;
+    list-style: none;
+}
+
+.header-menu div ul li a{
+    text-decoration: none;
+    color: black;
+    margin: 0px 30px;
+    
+}
+
+.content-first{
+    display: flex;
+}
+
+.content-text{
+    background-color: #f4f0f0;
+    position: relative;
+    padding: 20px 10px;
+}
+
+.content-text h2{
+    text-align: end;
+    
+}
+
+.content-text p{
+    margin: auto 4%;
+    line-height: 30px;
+    
+}
+
+.underline{
+    background-color: aqua;
+    width: 60px;
+    height: 7px;
+    position: absolute;
+    right: 5px;
+    top: 10%;
+    margin-top: 20px;
+    margin-right: 1%;
+}
+
+.best-seller-container{
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+}
+.best-seller h1{
+    text-align: center;
+    color:#0EC0C3
+}
+.best-seller-box{
+    display: flex;
+    gap: 3%;
+    
+}
+
+.best-seller-box > div{
+    text-align: center;
+    background-color: #f4f0f0;
+    padding: 3%;
+    width: 45%;
+}
+
+.best-seller-box div img{
+   width: 100%;
+}
+
+.buynow{ 
+    display: inline-block;
+    background-color: orange;
+    border-radius: 15px;
+    border: 1px black solid;
+    color: white;
+    padding: 10px;
+
+}
+
+.color-price{
+    color: red;
+    font-weight: bold;
+}
+.sale-of h1{
+    text-align: center;
+    color:#0EC0C3
+}
+
+.sale-of-table tr th{
+    background-color: #0EC0C3;
+    color: white;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.sale-of-table tr td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.sale-of-table{
+    border-spacing: 0px;
+    height: 454px;
+}
+
+.consult-container{
+    background-color: #f4f0f0; 
+    padding: 10px;
+    margin: 15px auto;
+}
+
+
+
+.consult-container h1{
+    text-align: center;
+    color: #0EC0C3;
+}
+.consult{
+    display: flex;
+    justify-content: flex-start;
+    gap: 3%; 
+
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5%;
+    height: 100%;
+    justify-content: center;
+}
+
+.label-name{
+    min-width: 80px;
+    display: inline-block;
+    text-align: left;
+    color: orange
+}
+
+.label-div{
+    margin: 20px auto;
+}
+
+.label-div input{
+    padding: 3px 3px;
+    padding-right: 30%;
+    
+}
+
+.button-submit input{
+    display: inline-block;
+    background-color: orange;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 7px;
+}
+
+.button-submit{
+    display: flex;
+    gap: 3%;
+    justify-content: flex-end;
+    margin: auto 5%;
+    
+}
+
+form {
+    padding: 0px 15px;
+}
+
+
+.footer{
+    text-align: center;
+    background-color: #0EC0C3;
+    color: white;
+    padding: 10px 15px;
+    margin-bottom: 0px;
+    margin: auto -1%;
+}
+
+body{
+    margin: 0px;
+    padding: 0px 1%;
+}

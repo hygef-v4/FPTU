@@ -1,0 +1,45 @@
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img{
+    width: 50%;
+    
+}
+.logo{
+    padding: 10px;
+}
+.search{
+    padding-top: 80px;
+}
+
+.nav-self{
+    margin: 0 30%;
+}
+
+.title{
+    color:aqua;
+    text-align: center;
+}
+.description{
+    padding: 0 15px;
+    font-size: 15px;
+}
+.img-adjust{
+    width: 80%;
+}
+.child-title{
+    color: orange;
+}
+.price{
+    color: red;
+}
+.footer{
+    background-color:rgb(22, 226, 219);
+    color:#fff;
+    text-align: center;
+    padding: 13px;
+    font-size: 13px;
+    margin-top: 13px;
+}

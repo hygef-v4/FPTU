@@ -1,0 +1,165 @@
+
+.logo{
+
+    display: flex;
+    justify-content: center;
+}
+.logo img{
+        width: 10%;
+}
+.menu{
+
+}
+.menu-list{
+    display: flex;
+    background-color: grey;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 0px;
+}
+
+.menu-list li{
+    list-style: none;
+}
+
+.menu-list li a{
+    text-decoration: none;
+    color: white;  
+    margin: auto 15px;
+}
+
+.banner{
+    margin-top: 0px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+}   
+
+.banner img{
+    width: 50%; 
+}   
+
+.content-display h2{
+   
+    color: #8CC3C7; 
+    font-weight: bold;
+}
+
+.content-display{
+    width: 60%;
+    margin-left: 10px;
+}
+
+.content{
+    display: flex;
+    
+    justify-content: space-around;
+}
+
+.img-content{
+    width: 50%;
+    text-align: left;
+}
+.img-content img{
+    width: 60%;
+    text-align: center;
+}
+
+.service h1{
+    text-align: center;
+    color: #8CC3C7; 
+}
+.service-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+}
+
+.service-block-1{
+    justify-content: center; /* Centers content inside the block */
+    align-items: center;
+    display: flex;
+    width: 100%;
+    
+   
+}
+.service-block-2{
+    display: flex;
+    width: 100%;
+    justify-content: center; /* Centers content inside the block */
+    align-items: center;
+}
+
+.img-block{
+    width: 20%;
+    margin: 10px 7px;
+    border: 3px double orange;
+    padding: 10px;
+    text-align: center; 
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img-block img{
+    width: 50%;
+
+}
+
+.view-button{
+    text-decoration: none;
+    background-color: #0D9DA0;
+    color: white;
+    padding: 10px;
+
+}
+
+.content-part2 h1{
+    text-align: center;
+    color: #8CC3C7; 
+}
+
+.content-part2-list{
+    display: flex;
+    justify-content: space-around
+}
+.img-block-2{
+    
+    background-color: #F0F0F0;
+    padding: 10px 18px 10px 18px;
+    border-radius: 10px;
+    margin: auto 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 339px;
+    
+}
+
+.img-block-2 img{
+    width: 70%;
+}
+
+.img-block-2 p{
+    color: orange;
+    font-weight: bold;
+}
+
+.footer{
+    text-align: center;
+    background-color: #808080;
+    color: white;
+    margin-bottom: 0px;
+    padding: 10px 0px;
+    margin-top: 15px; 
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    padding: 0px 5px;
+}
